@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Havas People - Code</title>
+	<style type="text/css">
+	body{
+		margin:0;
+		background-color:#ececec;
+		font-family: Helvetica;
+		font-weight: 300;
+	}
+	.header{
+		width: 100%;
+		height: 100px;
+		background: #333333;
+		margin-bottom: 55px;
+	}
+	.container{
+		width: 1000px;
+    	margin: 0 auto;
+	}
+	.content_row{
+		width:100%;
+		float: left;
+	}
+	.logo{
+		width:120px;
+		height: 24px;
+		padding-top: 40px;
+	}
+	.logo-space{
+		width:80%;
+	}
+	h1{
+		background-color: #DC022E;
+		color: white;
+		width:auto;
+		float: left;
+		padding: 5px;
+	}
+	hr{
+		width: 100%;
+	}
+	ul{
+		padding-left: 0;
+	}
+	ul li{
+		float: left;
+		list-style-type: none;
+	}
+	.info-block{
+		color: white;
+		height: auto;
+		width: 100%;
+		position: absolute;
+		bottom:0;
+		left:0;
+		padding: 60px 0 20px 20px;
+		float: left;
+	}
+	.info-block ul{
+		padding-left: 0;
+	}
+	.info-block ul li{
+		width:100%;
+		font-size: 0.9em;
+		font-weight: 300;
+		margin-bottom: 3px;
+	}
+	.flickr_row{
+		margin-bottom: 50px;
+	}
+	.arrow{
+		width:10px;
+		margin-left:10px;
+	    position: absolute;
+	}
+	.the-col{
+		width:48%; 
+		float:left; 
+		margin-bottom: 25px;
+	}
+	.the-left-col{
+		height:300px; 
+		background-color:grey; 
+		position:relative; 
+		background-image:url('images/layer59.png');
+	    background-size: cover;
+		background-repeat: no-repeat;
+	    margin-right: 10px;
+	}
+	.the-right-col{
+		height:300px; 
+		background-color:grey; 
+		position:relative; 
+		background-image:url('images/man.png');
+	    background-size: cover;
+		background-repeat: no-repeat;
+	    margin-left: 10px;
+	}
+	.red-circle-bg{
+		width:100%; 
+		height:200px; 
+		position:absolute; 
+		bottom:0; 
+		left:0; 
+		background-color:transparent; 
+		background-image:url('images/redcircle.png');
+		background-repeat: no-repeat;
+		background-size: 166% 234%;
+    	background-position: left 47% bottom 114%;
+	}
+	/*custom media queries - no frameworks used*/
+	@media screen and (max-width: 991px) {
+		.container{
+		width: 90%;
+    	margin:  auto;
+    	padding: 15px;
+		}
+		.content_row{
+			float: left;
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		.the-col{
+			width: 100%;
+	    	margin-bottom: 25px;
+		}
+		.the-left-col{
+			margin-right: 0;
+		}
+		.the-right-col{
+			margin-left: 0;
+		}
+	}
+	@media screen and (max-width: 479px) {
+		
+	}
+	</style>
+</head>
+<body>
+<div class="header">
+	<div class="container">
+		<div class="logo">
+			<img src="images/HPlogo.png">
+		</div>
+		<div class="logo-space"></div>
+	</div>
+</div>
+<div class="content">
+	<div class="container">
+		<div class="content_row">
+			<h1>About us</h1>
+			<hr>
+		</div>
+		<div class="content_row">
+		<h2>Whatever people challenges you're facing, we can help you tackle them head-on through brilliant communication and brand manangement.</h2>
+		<p>
+			Our approach is integrated, covering everything from initially grabbing our audiences attention, to nuturing your relationship over time. We work with all kinds of clients - and audiences who include everyone from students to CEO's. Because every organistion is unique, we dont like one size fits all solutions. Instead we prefer to work with you to create something absolutely spot on. However we can breakdown what we do in the following areas:
+		</p>
+		</div>
+		<div class="content_row">
+			<ul>
+				<li class="the-col the-left-col">
+					<div class="red-circle-bg">
+						<div class="info-block">
+								<h3>Our Clients</h3>
+								<ul>
+									<li>Tesco<img src="images/arrow.png" class="arrow"></li>
+									<li>Specsavers</li>
+									<li>Freshfields</li>
+								</ul>
+							</div>
+					</div>
+				</li>	
+				<li class="the-col the-right-col">
+					<div class="red-circle-bg">
+						<div class="info-block">
+								<h3>A great place to work</h3>
+								<ul>
+									<li>Training and development<img src="images/arrow.png" class="arrow"></li>
+									<li>Benefits</li>
+									<li>What we look for</li>
+								</ul>
+							</div>
+					</div>
+				</li>	
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="content">
+	<div class="container">
+		<div class="content_row flickr_row">
+			<a href="flickr.html"><h1>Flickr</h1></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

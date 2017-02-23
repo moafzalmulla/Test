@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Get images from Flicker feed</title>
+  <style>
+  body{
+    margin:0;
+    background-color:#ececec;
+    font-family: Helvetica;
+    font-weight: 300;
+  }
+  img {
+    height: 100px;
+    float: left;
+  }
+  .highlight{
+    border: red dashed 3px;
+  }
+  img{
+    width:15%;
+  }
+  h1{
+    background-color: #DC022E;
+    color: white;
+    width:auto;
+    float: left;
+    padding: 5px;
+  }
+  .container{
+    width: 1000px;
+      margin: 0 auto;
+  }
+  .content_row{
+    width:100%;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div class="content">
+  <div class="container">
+    <div class="content_row">
+      <h1>Double click an image to select / unselect the images you want.</h1>
+        <div id="images"></div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="container">
+    <div class="content_row flickr_row">
+      <a href="index.html"><h1>< Back to main page</h1></a>
+    </div>
+  </div>
+</div>
+<script>
+//Toggle class on selected
+function image(img) {
+    $( "img" ).click(function() {
+      $( this ).toggleClass( "highlight" );
+    });
+}
+//Get images from Flickr feed for images tagged London
+(function() {
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "london",
+    tagmode: "all",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img class='image' onclick='image()'>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 150 ) {
+          return false;
+        }
+      });
+    });
+})();
+</script>
+</body>
+</html>
